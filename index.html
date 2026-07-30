@@ -6,48 +6,95 @@
 <title>Morning Numbers — your Jobber numbers, in your inbox every Monday</title>
 <meta name="description" content="One email every Monday at 7am with your business numbers from Jobber: revenue vs last week, quote win rate, unscheduled jobs, and who owes you money by how overdue they are. Read-only, free for the first 10 businesses.">
 <meta property="og:title" content="Morning Numbers — your Jobber numbers, in your inbox every Monday">
-<meta property="og:description" content="Revenue vs last week, quote win rate, unscheduled jobs, and overdue invoices by age. One email, every Monday at 7am. Read-only, enforced by Jobber.">
+<meta property="og:description" content="Revenue vs last week, quote win rate, unscheduled jobs, and overdue invoices by age. One email, every Monday at 7am. Read-only.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://morningnumbers.com">
 <link rel="canonical" href="https://morningnumbers.com">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='62' r='26' fill='%23e8913a'/%3E%3Crect x='10' y='62' width='80' height='30' fill='%23fdfbf7'/%3E%3Crect x='14' y='66' width='72' height='4' fill='%23334'/%3E%3Crect x='14' y='76' width='52' height='4' fill='%23778'/%3E%3C/svg%3E">
 <style>
-  :root { --ink: #2b2b33; --muted: #6d6d78; --accent: #b95f1e; --line: #e6e1d8; --paper: #fdfbf7; --card: #ffffff; }
+  :root {
+    --bg: #fdfbf7; --ink: #2b2620; --ink-soft: #6b6257;
+    --accent: #d95f18; --accent-dk: #b84e11;
+    --card: #ffffff; --rule: #e8e0d2; --good: #2e7d4f;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    --mono: "SF Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #211d18; --ink: #ece5d8; --ink-soft: #a89d8e;
+            --card: #2b2620; --rule: #3a342c; --good: #5cb280; }
+  }
   * { box-sizing: border-box; }
-  body { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--paper); color: var(--ink); margin: 0; line-height: 1.65; }
-  .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px 60px; }
-  header.top { display: flex; align-items: center; gap: 10px; padding: 26px 0 8px; }
-  .sun { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(#f0a04b, #d97a26); position: relative; overflow: hidden; }
-  .sun::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: var(--paper); }
+  body { font-family: var(--sans); background: var(--bg); color: var(--ink);
+         margin: 0; font-size: 16px; line-height: 1.6; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 64px 0 0; }
+  .hairline { border: 0; border-top: 1px solid var(--rule); margin: 64px 0 0; }
+  header.top { display: flex; align-items: center; gap: 10px; padding: 24px 0 0; }
+  .sun { width: 22px; height: 22px; border-radius: 50%;
+         background: linear-gradient(#f0a04b, #d97a26); position: relative; overflow: hidden; }
+  .sun::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+                height: 45%; background: var(--bg); }
   .wordmark { font-weight: 700; letter-spacing: -0.01em; }
-  .badge { margin-left: auto; font-size: 12.5px; color: var(--muted); border: 1px solid var(--line); border-radius: 20px; padding: 3px 12px; background: var(--card); }
-  h1 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.9em, 5vw, 2.5em); line-height: 1.18; margin: 40px 0 10px; letter-spacing: -0.015em; }
-  .sub { font-size: 1.15em; color: var(--muted); margin: 0 0 8px; }
-  .lead { margin-top: 26px; }
-  /* email mockup */
-  .mail { background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin: 34px 0 10px; box-shadow: 0 6px 24px rgba(60,50,30,.07); overflow: hidden; }
-  .mail .bar { background: #f6f2ea; border-bottom: 1px solid var(--line); padding: 10px 18px; font-size: 13px; color: var(--muted); }
+
+  h1 { font-family: var(--serif); font-size: 34px; line-height: 1.15;
+       letter-spacing: -0.015em; margin: 48px 0 16px; font-weight: 700; }
+  h2 { font-family: var(--serif); font-size: 26px; line-height: 1.2; margin: 0 0 24px; }
+  h3 { font-family: var(--serif); font-size: 19px; line-height: 1.3; margin: 32px 0 8px; }
+  p { max-width: 62ch; }
+  .sub { font-size: 18px; line-height: 1.5; color: var(--ink-soft); margin: 0 0 32px; }
+  .squig { position: relative; white-space: nowrap; }
+  .squig svg { position: absolute; left: 0; right: 0; bottom: -6px; width: 100%; height: 8px; }
+
+  .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+         font-weight: 600; font-size: 17px; padding: 14px 28px; border-radius: 6px;
+         min-height: 48px; }
+  .btn:active, .btn:hover { background: var(--accent-dk); }
+  .caveat { font-size: 14px; color: var(--ink-soft); margin: 8px 0 0; }
+  .proof { font-size: 14px; color: var(--ink-soft); margin: 24px 0 0; }
+
+  .mail { background: var(--card); border: 1px solid var(--rule); border-radius: 6px;
+          margin: 32px auto 0; max-width: 480px; overflow: hidden;
+          box-shadow: 0 2px 12px rgba(43,38,32,.08); }
+  .mail .bar { border-bottom: 1px solid var(--rule); padding: 10px 18px;
+               font-size: 13px; color: var(--ink-soft); }
   .mail .bar b { color: var(--ink); font-weight: 600; }
-  .mail .body { padding: 20px 24px 22px; font-family: Georgia, serif; }
+  .mail .subj { font-family: var(--serif); font-weight: 700; padding: 12px 18px 0; }
+  .mail .body { padding: 8px 18px 20px; font-family: var(--serif); font-size: 15px; }
   .mail ul { line-height: 2; padding-left: 20px; margin: 8px 0; }
+  .mail .n { font-family: var(--mono); font-weight: 600; font-size: 15px; }
+  .mail .up { color: var(--good); }
   .mail table { border-collapse: collapse; margin-top: 4px; }
   .mail td { padding: 3px 18px 3px 0; }
-  .mail td.n { text-align: right; font-variant-numeric: tabular-nums; }
-  .hot { color: var(--accent); font-weight: 700; }
-  .sig { color: var(--muted); font-size: .85em; margin-top: 16px; }
-  .caption { text-align: center; color: var(--muted); font-size: .9em; margin-bottom: 36px; }
-  h2 { font-family: Georgia, serif; font-size: 1.35em; margin: 44px 0 6px; }
-  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
-  .step { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; font-size: .95em; }
-  .step b { display: block; margin-bottom: 4px; }
-  .step .k { color: var(--accent); font-weight: 700; font-size: .85em; }
-  @media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
-  .cta { background: #f2f6ef; border: 1px solid #d5e0cd; border-radius: 10px; padding: 18px 22px; margin: 40px 0; }
-  .cta a { color: #2e5d2e; font-weight: 600; }
-  dl dt { font-weight: 600; margin-top: 18px; }
-  dl dd { margin: 4px 0 0; color: #444; }
-  footer { color: var(--muted); font-size: .85em; margin-top: 56px; border-top: 1px solid var(--line); padding-top: 18px; }
+  .mail td.num { text-align: right; font-family: var(--mono); font-weight: 600; }
+  .hot { color: var(--accent); }
+  .mail .sig { color: var(--ink-soft); font-size: 13px; margin: 16px 0 0; font-family: var(--sans); }
+  .caption { text-align: center; color: var(--ink-soft); font-size: 14px; margin-top: 16px; }
+
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; }
+  ol.steps li { counter-increment: s; margin: 0 0 24px; padding-left: 48px; position: relative; }
+  ol.steps li::before { content: counter(s); font-family: var(--serif); font-weight: 700;
+      font-size: 26px; color: var(--accent); position: absolute; left: 8px; top: -6px; }
+  ol.steps b { display: block; }
+
+  .pull { text-align: center; font-family: var(--serif); font-style: italic;
+          color: var(--ink-soft); margin: 0; }
+  .ans { margin: 4px 0 0; color: var(--ink-soft); max-width: 62ch; }
+  .signoff { font-family: var(--serif); font-style: italic; }
+  .signoff .name { font-style: normal; }
+  footer { color: var(--ink-soft); font-size: 14px; padding: 24px 0 48px; }
   a { color: var(--accent); }
+
+  @media (min-width: 720px) {
+    body { font-size: 17px; }
+    h1 { font-size: 46px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 20px; }
+    .sub { font-size: 19px; }
+    section { padding-top: 96px; }
+    .hairline { margin-top: 96px; }
+    .mail { transform: rotate(-0.5deg); }
+  }
 </style>
 </head>
 <body>
@@ -56,57 +103,89 @@
 <header class="top">
   <div class="sun"></div>
   <span class="wordmark">Morning Numbers</span>
-  <span class="badge">built on the Jobber API &middot; read-only</span>
 </header>
 
-<h1>Your numbers land in your inbox Monday morning.</h1>
-<p class="sub">No dashboard to remember to log into.</p>
+<h1>Your <span class="squig">Monday numbers<svg viewBox="0 0 200 8" preserveAspectRatio="none"><path d="M2 5 Q 30 1, 60 5 T 118 5 T 176 5 T 198 4" fill="none" stroke="#d95f18" stroke-width="3" stroke-linecap="round"/></svg></span>, without opening Jobber.</h1>
+<p class="sub">One plain email, every Monday at 7am. What you invoiced, what you're winning, what's stuck, and who owes you money. Read it from the truck in two minutes.</p>
 
-<p class="lead">If you run your business on Jobber, you already have the data. What you don't have is a reason to dig through the reports section every week. Morning Numbers is one email, every Monday at 7am, with the numbers that change what you do that week.</p>
+<p style="margin:0"><a class="btn" href="https://community.getjobber.com/discussions/insights-reporting/kpi-dashboard/228">Get my Monday numbers</a></p>
+<p class="caveat">Free for the first 10 businesses &middot; read-only Jobber access &middot; no card, no contract</p>
+<!-- spots counter: update by hand on each signup; if it goes stale, delete the count, keep the line -->
+<p class="proof">Built by one engineer on Jobber's API &middot; 10 of 10 free spots open right now</p>
 
 <div class="mail">
-  <div class="bar">From: <b>Morning Numbers</b> &nbsp;&middot;&nbsp; Subject: <b>Levi Plumbing: $1,450 invoiced this week, $2,230 overdue</b></div>
+  <div class="bar">From: <b>Morning Numbers</b> &nbsp;&middot;&nbsp; Mon 7:00 AM</div>
+  <div class="subj">Levi Plumbing: $1,450 invoiced this week, $2,230 overdue</div>
   <div class="body">
-    <p style="margin:0 0 2px"><b>Levi Plumbing (demo)</b>, week of jul 27, so far:</p>
+    <p style="margin:6px 0 2px"><b>Levi Plumbing (demo)</b>, week of jul 27, so far:</p>
     <ul>
-      <li>Invoiced: <b>$1,450</b></li>
-      <li>Quotes won: 2/3 (67%)</li>
-      <li>Jobs done: 0, still unscheduled: 3</li>
+      <li>Invoiced: <span class="n">$1,450</span> <span class="n up">&#8593;23% on last week</span></li>
+      <li>Quotes won: <span class="n">2/3</span> (67%)</li>
+      <li>Jobs done: <span class="n">0</span>, still unscheduled: <span class="n">3</span></li>
     </ul>
     <p style="margin:10px 0 2px"><b>Overdue money:</b></p>
     <table>
-      <tr><td>0&ndash;30 days</td><td class="n"><b>$1,450</b></td></tr>
-      <tr><td>31&ndash;60 days</td><td class="n hot">$780</td></tr>
-      <tr><td>61&ndash;90 days</td><td class="n">$0</td></tr>
-      <tr><td>90+ days</td><td class="n">$0</td></tr>
+      <tr><td>0&ndash;30 days</td><td class="num">$1,450</td></tr>
+      <tr><td>31&ndash;60 days</td><td class="num hot">$780</td></tr>
+      <tr><td>61&ndash;90 days</td><td class="num">$0</td></tr>
+      <tr><td>90+ days</td><td class="num">$0</td></tr>
     </table>
     <p class="sig">Want a number added or changed? Just reply.<br>&ndash; Omri</p>
   </div>
 </div>
-<p class="caption">Real output, generated from a demo Jobber account. The overdue table is the part people reply to.</p>
+<p class="caption">Real output from a demo Jobber account. The overdue table is the part people reply to.</p>
 
+<hr class="hairline">
+<section style="padding-top:64px">
 <h2>How it works</h2>
-<div class="steps">
-  <div class="step"><span class="k">1</span><b>Connect</b>You log in through Jobber's own screen. I never see your password.</div>
-  <div class="step"><span class="k">2</span><b>Nothing to set up</b>No dashboards, no reports to build, no app to install.</div>
-  <div class="step"><span class="k">3</span><b>Monday, 7am</b>Your numbers arrive by email. Reply to change what's in it.</div>
-</div>
+<ol class="steps">
+  <li><b>Connect your Jobber account</b> Under two minutes, through Jobber's own login screen. Read-only: I can see your numbers, I can never change anything.</li>
+  <li><b>The math runs before you're up</b> Revenue against last week, quote win rate, jobs sold but not scheduled, and every unpaid invoice sorted by how overdue it is.</li>
+  <li><b>Read it Monday at 7am</b> One email, two minutes, done. No login, no dashboard, no app to install.</li>
+</ol>
+<p style="margin-top:32px"><a class="btn" href="https://community.getjobber.com/discussions/insights-reporting/kpi-dashboard/228">Get my Monday numbers</a></p>
+<p class="caveat">Free for the first 10 businesses &middot; no card, no contract</p>
+</section>
 
-<div class="cta">
-  <b>Free for the first 10 Jobber businesses.</b> I'm running this while I figure out which numbers matter most to owners. Want in? Find my post in the <a href="https://community.getjobber.com/discussions/insights-reporting/kpi-dashboard/228">Jobber community</a> and comment or DM me there.
-</div>
+<hr class="hairline">
+<section style="padding-top:64px">
+<h2>What's in the email</h2>
+<p>Every Monday you get: <b>last week's invoiced revenue</b> against the week before, <b>quote win rate</b>, <b>jobs done and jobs still unscheduled</b> (work you sold that isn't on the calendar), and <b>overdue invoices by age</b>: 0&ndash;30, 31&ndash;60, 61&ndash;90, 90+ days. That's it. No charts to interpret.</p>
+<!-- proof slot: swap this line for the first real, named user quote. one-block edit. -->
+<p class="pull" style="margin-top:48px">Currently onboarding the first 10 businesses.</p>
+</section>
 
+<hr class="hairline">
+<section style="padding-top:64px">
 <h2>Fair questions</h2>
-<dl>
-  <dt>Can this touch my Jobber account?</dt>
-  <dd>No. The app is registered read-only with Jobber, so their API blocks it from changing anything. You'll see "view" permissions on the consent screen, and you can disconnect it from Jobber whenever you want.</dd>
-  <dt>What does it cost?</dt>
-  <dd>Nothing right now. If it becomes a proper product later it'll be a flat monthly price, and the free group will hear it from me first. No surprise charges.</dd>
-  <dt>Who's behind it?</dt>
-  <dd>Omri. I build business software for a living. I kept seeing Jobber owners ask for numbers they couldn't get without digging (projected revenue, cancelled jobs, a KPI view that fits their business) and figured nobody wants one more dashboard to check. The numbers should just show up.</dd>
-</dl>
+<div>
+  <h3>What can you see in my Jobber?</h3>
+  <p class="ans">Your numbers, nothing else, and read-only. The app is registered read-only with Jobber, so their API blocks it from changing anything. You'll see "view" permissions on the consent screen, and you can disconnect it from your Jobber settings whenever you want.</p>
+  <h3>What does it cost?</h3>
+  <p class="ans">Nothing right now. If it becomes a proper product later it'll be one flat monthly price. No tiers, no per-seat pricing, no annual lock-in, and the free group hears it from me first.</p>
+  <h3>Is this another subscription I'll forget about?</h3>
+  <p class="ans">It's one email a week. If you stop opening them, reply "stop" and it stops. No cancellation flow, no retention offer.</p>
+  <h3>What if I leave Jobber?</h3>
+  <p class="ans">Then this stops being useful and you should quit it. Nothing holds you.</p>
+  <h3>Who's behind this?</h3>
+  <p class="ans">One engineer (me, Omri). I build business software for a living, and I kept seeing Jobber owners ask for numbers they could only get by digging. No sales team, no investors. If you reply to the email, it's me reading it.</p>
+</div>
+</section>
 
-<footer>Morning Numbers &middot; built on the <a href="https://developer.getjobber.com">Jobber API</a> &middot; read-only by design &middot; not affiliated with Jobber<br><a href="/jobber-monday-numbers/">The 5 numbers to check every Monday</a></footer>
+<hr class="hairline">
+<section style="padding-top:64px">
+<h2>Want next Monday's email?</h2>
+<p style="margin:0"><a class="btn" href="https://community.getjobber.com/discussions/insights-reporting/kpi-dashboard/228">Get my Monday numbers</a></p>
+<p class="caveat">Free for the first 10 businesses &middot; read-only &middot; no card, no contract. The button goes to my post in Jobber's own community. Comment or DM me there and you're in.</p>
+
+<p class="signoff" style="margin-top:48px">I built this because owners kept telling me they only find out about a bad week when it's already over. If the email isn't useful, tell me and I'll fix it, or you walk away. <span class="name">&ndash; Omri</span></p>
+</section>
+
+<footer>
+  <hr class="hairline" style="margin:0 0 24px">
+  Morning Numbers &middot; made for home-service businesses that run on <a href="https://developer.getjobber.com">Jobber</a> &middot; not affiliated with Jobber<br>
+  <a href="/jobber-monday-numbers/">The 5 numbers to check every Monday</a>
+</footer>
 
 </div>
 </body>
