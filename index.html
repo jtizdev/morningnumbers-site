@@ -296,7 +296,7 @@ async function refresh(){
       }catch(e){}
     }
     if(moved) render();
-    $('#stamp').textContent = 'Analysis built 31 Jul 2026, 12:40 UTC · prices refreshed '
+    $('#stamp').textContent = 'Analysis built 31 Jul 2026, 12:41 UTC · prices refreshed '
       + new Date().toLocaleTimeString() + ' · ' + moved + ' moved on the last poll.';
   }catch(e){}
 }
@@ -649,6 +649,6 @@ function render(){ nav(); verdict(); stats(); picks(); liveSection(); tabs(); ta
 $('#decided').onchange = () => { page=0; render(); };
 $('#onlyAnalysed').onchange = () => { page=0; render(); };
 render(); training(); drawRecord(); moneyPage();
-$('#stamp').textContent = 'Analysis built 31 Jul 2026, 12:40 UTC · refreshing prices…';
+$('#stamp').textContent = 'Analysis built 31 Jul 2026, 12:41 UTC · refreshing prices…';
 refresh(); setInterval(refresh, 30000);
 </script></body></html>
