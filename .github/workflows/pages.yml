@@ -1,0 +1,36 @@
+# Deploy the built board to GitHub Pages.
+#
+# WHY THIS EXISTS RATHER THAN THE LEGACY BUILDER: on 2026-08-06 the legacy Jekyll
+# builder started failing every build with "Page build failed." and duration 0 — no log,
+# no reason, on a repo of six files with .nojekyll present. The site froze for an hour
+# while run.sh kept reporting "published" (it had: the push succeeded; the DEPLOY was
+# what failed). Actions gives a real log when something breaks.
+#
+# cancel-in-progress matters: run.sh pushes every 15 minutes, and a deploy that is
+# superseded should be cancelled, not raced.
+name: Deploy to Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+      - id: deployment
+        uses: actions/deploy-pages@v4
