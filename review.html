@@ -1,346 +1,308 @@
-<title>Review</title><meta name=viewport content='width=device-width,initial-scale=1'><style>body{margin:0;padding:16px;background:#f6f5f2;color:#1b1b1b;font:14px/1.45 -apple-system,system-ui,sans-serif}pre{overflow-x:auto;background:#fff;padding:12px;border-radius:8px}@media(prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}pre{background:#1c1c1c}}</style><a href='/board'>&larr; board</a><pre># Nightly review — 2026-09-26
+<title>Review</title><meta name=viewport content='width=device-width,initial-scale=1'><style>body{margin:0;padding:16px;background:#f6f5f2;color:#1b1b1b;font:14px/1.45 -apple-system,system-ui,sans-serif}pre{overflow-x:auto;background:#fff;padding:12px;border-radius:8px}@media(prefers-color-scheme:dark){body{background:#111;color:#e6e6e6}pre{background:#1c1c1c}}</style><a href='/board'>&larr; board</a><pre># Nightly review — 2026-09-27
 
-Window 2026-09-13 .. 2026-09-26 (Israel days). Every number is the bot&#x27;s own settled record; per $1 is the mean per-bet return with a 90% bootstrap range; a verdict is printed only at n &gt;= 10.
+Window 2026-09-14 .. 2026-09-27 (Israel days). Every number is the bot&#x27;s own settled record; per $1 is the mean per-bet return with a 90% bootstrap range; a verdict is printed only at n &gt;= 10.
 
-**Join:** 309 positions matched a `buy`, 17 a resting offer with a fill row, 52 a resting offer that filled in full (no fill row exists for those; cost = ended shares x the offer&#x27;s price), **44 matched neither** — counted here and in no table.
+**Join:** 316 positions matched a `buy`, 14 a resting offer with a fill row, 49 a resting offer that filled in full (no fill row exists for those; cost = ended shares x the offer&#x27;s price), **35 matched neither** — counted here and in no table.
 
-## (a) The day: 2026-09-26
+## (a) The day: 2026-09-27
 ```
-  all                    n=  49  staked   153.68  pnl   -37.66  won  39%  per$1 -0.308 [-0.47,-0.14]  &lt;- clears zero, LOSING
+  all                    n=  30  staked   111.17  pnl   -14.01  won  47%  per$1 -0.123 [-0.31,+0.07]
 ```
 
 ### by class
 ```
-  totals                 n=  29  staked    90.85  pnl   -36.76  won  24%  per$1 -0.492 [-0.68,-0.30]  &lt;- clears zero, LOSING
-      older half         n=  14  staked    38.40  pnl   -25.37  won   7%  per$1 -0.749 [-0.99,-0.49]  &lt;- clears zero, LOSING
-      newer half         n=  15  staked    52.46  pnl   -11.40  won  40%  per$1 -0.252 [-0.50,+0.02]
-  handicap               n=   9  staked    22.37  pnl    -4.33  won  33%  per$1 -0.234 [-0.61,+0.22]  (n&lt;10, too thin to read)
-      older half         n=   4  staked     8.79  pnl    -2.18  won  25%  per$1 -0.248 [-1.00,+0.50]  (n&lt;10, too thin to read)
-      newer half         n=   5  staked    13.59  pnl    -2.15  won  40%  per$1 -0.222 [-0.56,+0.07]  (n&lt;10, too thin to read)
-  map                    n=   8  staked    30.25  pnl    -0.02  won  75%  per$1 +0.031 [-0.40,+0.43]  (n&lt;10, too thin to read)
-      older half         n=   4  staked    16.43  pnl    -0.99  won  75%  per$1 -0.049 [-0.41,+0.30]  (n&lt;10, too thin to read)
-      newer half         n=   4  staked    13.82  pnl    +0.97  won  75%  per$1 +0.111 [-0.44,+0.67]  (n&lt;10, too thin to read)
-  series                 n=   3  staked    10.20  pnl    +3.45  won 100%  per$1 +0.337 [+0.30,+0.37]  (n&lt;10, too thin to read)
+  totals                 n=  18  staked    67.61  pnl    -5.83  won  44%  per$1 -0.085 [-0.34,+0.18]
+      older half         n=   9  staked    28.47  pnl    -7.80  won  44%  per$1 -0.265 [-0.64,+0.11]  (n&lt;10, too thin to read)
+      newer half         n=   9  staked    39.14  pnl    +1.97  won  44%  per$1 +0.096 [-0.20,+0.55]  (n&lt;10, too thin to read)
+  map                    n=   8  staked    30.27  pnl    -4.73  won  50%  per$1 -0.130 [-0.47,+0.18]  (n&lt;10, too thin to read)
+      older half         n=   4  staked    14.51  pnl    -2.51  won  50%  per$1 -0.145 [-0.69,+0.33]  (n&lt;10, too thin to read)
+      newer half         n=   4  staked    15.76  pnl    -2.22  won  50%  per$1 -0.115 [-0.65,+0.23]  (n&lt;10, too thin to read)
+  handicap               n=   4  staked    13.29  pnl    -3.45  won  50%  per$1 -0.280 [-0.74,+0.18]  (n&lt;10, too thin to read)
 ```
 
 ### by game
 ```
-  cs2                    n=  35  staked   110.40  pnl   -22.97  won  40%  per$1 -0.258 [-0.46,-0.04]  &lt;- clears zero, LOSING
-      older half         n=  17  staked    46.91  pnl   -19.90  won  24%  per$1 -0.481 [-0.78,-0.14]  &lt;- clears zero, LOSING
-      newer half         n=  18  staked    63.49  pnl    -3.07  won  56%  per$1 -0.048 [-0.30,+0.20]
-  dota                   n=   5  staked    15.46  pnl    -8.73  won  20%  per$1 -0.667 [-1.01,-0.32]  (n&lt;10, too thin to read)
-  lol                    n=   5  staked    14.54  pnl    +0.13  won  60%  per$1 -0.104 [-0.50,+0.25]  (n&lt;10, too thin to read)
-  valorant               n=   2  staked     8.00  pnl    -0.81  won  50%  per$1 -0.111 [-0.56,+0.34]  (n&lt;10, too thin to read)
-  mlbb                   n=   2  staked     5.28  pnl    -5.28  won   0%  per$1 -1.000 [-1.00,-1.00]  (n&lt;10, too thin to read)
+  cs2                    n=  26  staked    98.08  pnl    -5.99  won  50%  per$1 -0.048 [-0.26,+0.18]
+      older half         n=  13  staked    44.86  pnl    -6.93  won  54%  per$1 -0.143 [-0.43,+0.14]
+      newer half         n=  13  staked    53.22  pnl    +0.94  won  46%  per$1 +0.048 [-0.22,+0.37]
+  lol                    n=   3  staked    10.14  pnl    -5.01  won  33%  per$1 -0.472 [-0.80,-0.15]  (n&lt;10, too thin to read)
+  valorant               n=   1  staked     2.95  pnl    -3.01  won   0%  per$1 -1.021 [-1.02,-1.02]  (n&lt;10, too thin to read)
 ```
 
 ## (b) The 14-day table
 ```
-  everything             n= 378  staked  1367.16  pnl  -112.23  won  54%  per$1 -0.132 [-0.20,-0.07]  &lt;- clears zero, LOSING
-      older half         n= 189  staked   673.03  pnl   -27.83  won  53%  per$1 -0.080 [-0.17,+0.02]
-      newer half         n= 189  staked   694.13  pnl   -84.39  won  54%  per$1 -0.184 [-0.28,-0.09]  &lt;- clears zero, LOSING
+  everything             n= 379  staked  1372.64  pnl  -127.43  won  53%  per$1 -0.142 [-0.21,-0.08]  &lt;- clears zero, LOSING
+      older half         n= 189  staked   687.21  pnl   -25.17  won  55%  per$1 -0.084 [-0.17,+0.01]
+      newer half         n= 190  staked   685.42  pnl  -102.27  won  51%  per$1 -0.200 [-0.29,-0.12]  &lt;- clears zero, LOSING
 ```
 
 ### by entry price
 ```
-  50-60c                 n= 114  staked   374.40  pnl   -21.69  won  44%  per$1 -0.172 [-0.32,-0.03]  &lt;- clears zero, LOSING
-      older half         n=  57  staked   187.96  pnl    -2.28  won  46%  per$1 -0.072 [-0.26,+0.11]
-      newer half         n=  57  staked   186.45  pnl   -19.42  won  42%  per$1 -0.271 [-0.49,-0.07]  &lt;- clears zero, LOSING
-  60-70c                 n=  77  staked   285.79  pnl    -8.59  won  56%  per$1 -0.044 [-0.17,+0.07]
-      older half         n=  38  staked   143.47  pnl    -5.50  won  55%  per$1 -0.054 [-0.24,+0.12]
-      newer half         n=  39  staked   142.32  pnl    -3.09  won  56%  per$1 -0.034 [-0.20,+0.12]
-  70-80c                 n=  56  staked   238.12  pnl   -28.83  won  62%  per$1 -0.079 [-0.21,+0.06]
-      older half         n=  28  staked   115.76  pnl    -8.03  won  61%  per$1 -0.013 [-0.20,+0.19]
-      newer half         n=  28  staked   122.36  pnl   -20.79  won  64%  per$1 -0.145 [-0.33,+0.05]
-  40-50c                 n=  40  staked   114.59  pnl   -20.60  won  35%  per$1 -0.175 [-0.42,+0.08]
-      older half         n=  20  staked    57.39  pnl    +0.83  won  45%  per$1 -0.020 [-0.39,+0.34]
-      newer half         n=  20  staked    57.20  pnl   -21.43  won  25%  per$1 -0.331 [-0.65,-0.01]  &lt;- clears zero, LOSING
-  80-90c                 n=  38  staked   174.83  pnl    +2.43  won  84%  per$1 +0.003 [-0.10,+0.11]
-      older half         n=  19  staked    86.84  pnl    -4.46  won  79%  per$1 -0.072 [-0.26,+0.11]
-      newer half         n=  19  staked    87.99  pnl    +6.89  won  89%  per$1 +0.078 [-0.05,+0.17]
+  50-60c                 n= 112  staked   371.68  pnl   -29.41  won  43%  per$1 -0.199 [-0.34,-0.06]  &lt;- clears zero, LOSING
+      older half         n=  56  staked   197.79  pnl   +13.72  won  50%  per$1 -0.048 [-0.23,+0.13]
+      newer half         n=  56  staked   173.89  pnl   -43.12  won  36%  per$1 -0.350 [-0.57,-0.15]  &lt;- clears zero, LOSING
+  60-70c                 n=  74  staked   279.44  pnl    -7.78  won  57%  per$1 -0.034 [-0.16,+0.08]
+      older half         n=  37  staked   138.42  pnl    +0.48  won  62%  per$1 -0.001 [-0.18,+0.19]
+      newer half         n=  37  staked   141.02  pnl    -8.25  won  51%  per$1 -0.067 [-0.23,+0.08]
+  70-80c                 n=  60  staked   247.81  pnl   -38.16  won  58%  per$1 -0.116 [-0.25,+0.02]
+      older half         n=  30  staked   123.55  pnl   -18.90  won  57%  per$1 -0.087 [-0.29,+0.12]
+      newer half         n=  30  staked   124.26  pnl   -19.26  won  60%  per$1 -0.144 [-0.31,+0.02]
+  40-50c                 n=  42  staked   120.46  pnl   -25.35  won  33%  per$1 -0.204 [-0.43,+0.04]
+      older half         n=  21  staked    59.43  pnl    -3.06  won  43%  per$1 -0.090 [-0.42,+0.27]
+      newer half         n=  21  staked    61.03  pnl   -22.29  won  24%  per$1 -0.317 [-0.61,-0.00]  &lt;- clears zero, LOSING
+  80-90c                 n=  37  staked   170.61  pnl    +1.83  won  84%  per$1 +0.000 [-0.11,+0.11]
+      older half         n=  18  staked    83.60  pnl    -0.14  won  83%  per$1 -0.022 [-0.22,+0.12]
+      newer half         n=  19  staked    87.01  pnl    +1.97  won  84%  per$1 +0.020 [-0.13,+0.15]
   90-100c                n=  26  staked   123.82  pnl    -1.05  won  92%  per$1 -0.010 [-0.10,+0.07]
       older half         n=  13  staked    61.10  pnl    -0.43  won  92%  per$1 -0.006 [-0.17,+0.08]
       newer half         n=  13  staked    62.72  pnl    -0.62  won  92%  per$1 -0.014 [-0.18,+0.07]
   30-40c                 n=  19  staked    41.76  pnl   -21.91  won  21%  per$1 -0.458 [-0.79,-0.10]  &lt;- clears zero, LOSING
       older half         n=   9  staked    21.77  pnl   -13.53  won  22%  per$1 -0.540 [-1.01,+0.06]  (n&lt;10, too thin to read)
       newer half         n=  10  staked    19.99  pnl    -8.38  won  20%  per$1 -0.384 [-0.83,+0.11]
-  20-30c                 n=   6  staked    10.79  pnl   -10.07  won   0%  per$1 -0.946 [-1.02,-0.86]  (n&lt;10, too thin to read)
+  20-30c                 n=   7  staked    14.01  pnl    -3.70  won  14%  per$1 -0.529 [-1.00,+0.29]  (n&lt;10, too thin to read)
       older half         n=   3  staked     6.06  pnl    -5.96  won   0%  per$1 -0.993 [-1.04,-0.95]  (n&lt;10, too thin to read)
-      newer half         n=   3  staked     4.73  pnl    -4.11  won   0%  per$1 -0.900 [-1.00,-0.80]  (n&lt;10, too thin to read)
+      newer half         n=   4  staked     7.95  pnl    +2.26  won  25%  per$1 -0.180 [-1.00,+0.64]  (n&lt;10, too thin to read)
   ?                      n=   1  staked     1.00  pnl    +0.16  won 100%  per$1 +0.157 [+0.16,+0.16]  (n&lt;10, too thin to read)
   10-20c                 n=   1  staked     2.05  pnl    -2.08  won   0%  per$1 -1.014 [-1.01,-1.01]  (n&lt;10, too thin to read)
 ```
 
 ### by class
 ```
-  totals                 n= 135  staked   429.40  pnl   -58.62  won  45%  per$1 -0.197 [-0.33,-0.08]  &lt;- clears zero, LOSING
-      older half         n=  67  staked   208.60  pnl    -5.57  won  54%  per$1 -0.059 [-0.22,+0.11]
-      newer half         n=  68  staked   220.80  pnl   -53.04  won  37%  per$1 -0.333 [-0.51,-0.17]  &lt;- clears zero, LOSING
-  map                    n=  88  staked   399.04  pnl   -35.62  won  73%  per$1 -0.096 [-0.19,+0.00]
-      older half         n=  44  staked   200.94  pnl   -17.88  won  70%  per$1 -0.097 [-0.24,+0.05]
-      newer half         n=  44  staked   198.10  pnl   -17.74  won  75%  per$1 -0.096 [-0.23,+0.03]
-  handicap               n=  80  staked   223.52  pnl   -43.72  won  41%  per$1 -0.230 [-0.38,-0.08]  &lt;- clears zero, LOSING
-      older half         n=  40  staked   114.36  pnl   -18.03  won  48%  per$1 -0.158 [-0.38,+0.07]
-      newer half         n=  40  staked   109.16  pnl   -25.69  won  35%  per$1 -0.301 [-0.51,-0.10]  &lt;- clears zero, LOSING
-  series                 n=  75  staked   315.20  pnl   +25.73  won  60%  per$1 +0.048 [-0.08,+0.17]
-      older half         n=  37  staked   132.32  pnl    -0.79  won  46%  per$1 -0.028 [-0.21,+0.16]
-      newer half         n=  38  staked   182.88  pnl   +26.52  won  74%  per$1 +0.122 [-0.04,+0.28]
+  totals                 n= 146  staked   476.10  pnl   -68.27  won  44%  per$1 -0.200 [-0.31,-0.09]  &lt;- clears zero, LOSING
+      older half         n=  73  staked   234.41  pnl   -27.31  won  48%  per$1 -0.143 [-0.30,+0.00]
+      newer half         n=  73  staked   241.69  pnl   -40.96  won  40%  per$1 -0.256 [-0.42,-0.09]  &lt;- clears zero, LOSING
+  map                    n=  92  staked   413.72  pnl   -44.47  won  70%  per$1 -0.115 [-0.21,-0.02]  &lt;- clears zero, LOSING
+      older half         n=  46  staked   213.27  pnl   -22.15  won  70%  per$1 -0.118 [-0.26,+0.03]
+      newer half         n=  46  staked   200.45  pnl   -22.32  won  70%  per$1 -0.113 [-0.24,+0.01]
+  handicap               n=  82  staked   229.96  pnl   -48.79  won  40%  per$1 -0.243 [-0.38,-0.09]  &lt;- clears zero, LOSING
+      older half         n=  41  staked   117.26  pnl   -15.97  won  49%  per$1 -0.138 [-0.35,+0.08]
+      newer half         n=  41  staked   112.70  pnl   -32.83  won  32%  per$1 -0.349 [-0.55,-0.15]  &lt;- clears zero, LOSING
+  series                 n=  59  staked   252.85  pnl   +34.10  won  66%  per$1 +0.100 [-0.04,+0.23]
+      older half         n=  29  staked   114.83  pnl    +5.13  won  55%  per$1 +0.019 [-0.21,+0.24]
+      newer half         n=  30  staked   138.02  pnl   +28.97  won  77%  per$1 +0.178 [-0.00,+0.34]
 ```
 
 ### by game
 ```
-  cs2                    n= 267  staked   994.43  pnl   -90.10  won  55%  per$1 -0.142 [-0.22,-0.07]  &lt;- clears zero, LOSING
-      older half         n= 133  staked   506.62  pnl    +4.69  won  60%  per$1 -0.033 [-0.13,+0.07]
-      newer half         n= 134  staked   487.81  pnl   -94.79  won  49%  per$1 -0.250 [-0.36,-0.14]  &lt;- clears zero, LOSING
-  dota                   n=  57  staked   191.62  pnl   -21.53  won  47%  per$1 -0.182 [-0.35,-0.02]  &lt;- clears zero, LOSING
-      older half         n=  28  staked    92.67  pnl   -13.96  won  43%  per$1 -0.212 [-0.46,+0.04]
-      newer half         n=  29  staked    98.95  pnl    -7.57  won  52%  per$1 -0.153 [-0.36,+0.05]
-  lol                    n=  37  staked   127.70  pnl    -1.46  won  57%  per$1 -0.014 [-0.23,+0.21]
-      older half         n=  18  staked    65.06  pnl    -4.58  won  56%  per$1 -0.001 [-0.32,+0.31]
-      newer half         n=  19  staked    62.65  pnl    +3.11  won  58%  per$1 -0.027 [-0.32,+0.28]
-  valorant               n=   9  staked    34.00  pnl    +0.46  won  56%  per$1 +0.046 [-0.30,+0.40]  (n&lt;10, too thin to read)
-      older half         n=   4  staked    16.73  pnl    -5.38  won  25%  per$1 -0.419 [-0.73,-0.11]  (n&lt;10, too thin to read)
-      newer half         n=   5  staked    17.27  pnl    +5.83  won  80%  per$1 +0.417 [-0.02,+0.81]  (n&lt;10, too thin to read)
-  mlbb                   n=   7  staked    18.76  pnl    +1.04  won  57%  per$1 -0.056 [-0.57,+0.46]  (n&lt;10, too thin to read)
-      older half         n=   3  staked     6.80  pnl    +3.10  won  67%  per$1 +0.205 [-0.44,+0.85]  (n&lt;10, too thin to read)
-      newer half         n=   4  staked    11.96  pnl    -2.06  won  50%  per$1 -0.252 [-1.00,+0.42]  (n&lt;10, too thin to read)
+  cs2                    n= 276  staked  1028.87  pnl   -98.73  won  54%  per$1 -0.145 [-0.22,-0.07]  &lt;- clears zero, LOSING
+      older half         n= 138  staked   533.43  pnl   -19.84  won  59%  per$1 -0.075 [-0.17,+0.02]
+      newer half         n= 138  staked   495.44  pnl   -78.89  won  49%  per$1 -0.214 [-0.33,-0.11]  &lt;- clears zero, LOSING
+  dota                   n=  56  staked   189.07  pnl   -18.92  won  48%  per$1 -0.167 [-0.34,-0.01]  &lt;- clears zero, LOSING
+      older half         n=  28  staked    92.72  pnl   -13.86  won  43%  per$1 -0.210 [-0.46,+0.04]
+      newer half         n=  28  staked    96.35  pnl    -5.05  won  54%  per$1 -0.124 [-0.33,+0.08]
+  lol                    n=  31  staked   104.79  pnl    -6.91  won  52%  per$1 -0.067 [-0.30,+0.19]
+      older half         n=  15  staked    50.30  pnl    -3.76  won  47%  per$1 +0.019 [-0.40,+0.45]
+      newer half         n=  16  staked    54.49  pnl    -3.16  won  56%  per$1 -0.147 [-0.42,+0.12]
+  valorant               n=   9  staked    33.00  pnl    -0.90  won  56%  per$1 -0.021 [-0.43,+0.37]  (n&lt;10, too thin to read)
+      older half         n=   4  staked    16.85  pnl    -1.87  won  50%  per$1 -0.201 [-0.68,+0.26]  (n&lt;10, too thin to read)
+      newer half         n=   5  staked    16.15  pnl    +0.97  won  60%  per$1 +0.122 [-0.52,+0.67]  (n&lt;10, too thin to read)
+  mlbb                   n=   6  staked    16.26  pnl    -1.35  won  50%  per$1 -0.225 [-0.72,+0.32]  (n&lt;10, too thin to read)
+      older half         n=   3  staked     7.95  pnl    +1.96  won  67%  per$1 +0.001 [-0.55,+0.55]  (n&lt;10, too thin to read)
+      newer half         n=   3  staked     8.31  pnl    -3.31  won  33%  per$1 -0.450 [-1.00,+0.10]  (n&lt;10, too thin to read)
   other                  n=   1  staked     0.64  pnl    -0.63  won   0%  per$1 -0.983 [-0.98,-0.98]  (n&lt;10, too thin to read)
 ```
 
 ### by stars
 ```
-  2★                     n= 251  staked   864.83  pnl  -131.66  won  49%  per$1 -0.206 [-0.29,-0.13]  &lt;- clears zero, LOSING
-      older half         n= 125  staked   417.49  pnl   -32.58  won  50%  per$1 -0.103 [-0.22,+0.01]
-      newer half         n= 126  staked   447.34  pnl   -99.08  won  47%  per$1 -0.309 [-0.42,-0.20]  &lt;- clears zero, LOSING
-  1★                     n=  67  staked   227.95  pnl    +3.22  won  61%  per$1 -0.014 [-0.16,+0.13]
-      older half         n=  33  staked   109.22  pnl    -1.88  won  58%  per$1 -0.057 [-0.30,+0.18]
-      newer half         n=  34  staked   118.73  pnl    +5.10  won  65%  per$1 +0.028 [-0.14,+0.20]
+  2★                     n= 247  staked   846.38  pnl  -139.97  won  48%  per$1 -0.220 [-0.30,-0.14]  &lt;- clears zero, LOSING
+      older half         n= 123  staked   410.55  pnl   -38.41  won  52%  per$1 -0.126 [-0.23,-0.01]  &lt;- clears zero, LOSING
+      newer half         n= 124  staked   435.83  pnl  -101.55  won  44%  per$1 -0.313 [-0.43,-0.21]  &lt;- clears zero, LOSING
+  1★                     n=  74  staked   258.78  pnl    -0.78  won  58%  per$1 -0.020 [-0.16,+0.13]
+      older half         n=  37  staked   124.50  pnl    -1.68  won  59%  per$1 -0.052 [-0.27,+0.17]
+      newer half         n=  37  staked   134.28  pnl    +0.90  won  57%  per$1 +0.012 [-0.18,+0.20]
   3★                     n=  49  staked   246.30  pnl   +18.04  won  71%  per$1 +0.070 [-0.09,+0.22]
       older half         n=  24  staked   120.75  pnl   +12.03  won  71%  per$1 +0.070 [-0.16,+0.29]
       newer half         n=  25  staked   125.56  pnl    +6.01  won  72%  per$1 +0.071 [-0.17,+0.30]
   0★                     n=   8  staked    20.17  pnl    -4.89  won  25%  per$1 -0.199 [-0.65,+0.25]  (n&lt;10, too thin to read)
       older half         n=   4  staked    11.11  pnl    -3.56  won  25%  per$1 -0.331 [-0.99,+0.38]  (n&lt;10, too thin to read)
       newer half         n=   4  staked     9.06  pnl    -1.32  won  25%  per$1 -0.067 [-0.58,+0.44]  (n&lt;10, too thin to read)
-  ?                      n=   3  staked     7.90  pnl    +3.05  won 100%  per$1 +0.335 [+0.22,+0.45]  (n&lt;10, too thin to read)
+  ?                      n=   1  staked     1.00  pnl    +0.16  won 100%  per$1 +0.157 [+0.16,+0.16]  (n&lt;10, too thin to read)
 ```
 
 ### by copier
 ```
-  model                  n= 378  staked  1367.16  pnl  -112.23  won  54%  per$1 -0.132 [-0.20,-0.07]  &lt;- clears zero, LOSING
-      older half         n= 189  staked   673.03  pnl   -27.83  won  53%  per$1 -0.080 [-0.17,+0.02]
-      newer half         n= 189  staked   694.13  pnl   -84.39  won  54%  per$1 -0.184 [-0.28,-0.09]  &lt;- clears zero, LOSING
+  model                  n= 379  staked  1372.64  pnl  -127.43  won  53%  per$1 -0.142 [-0.21,-0.08]  &lt;- clears zero, LOSING
+      older half         n= 189  staked   687.21  pnl   -25.17  won  55%  per$1 -0.084 [-0.17,+0.01]
+      newer half         n= 190  staked   685.42  pnl  -102.27  won  51%  per$1 -0.200 [-0.29,-0.12]  &lt;- clears zero, LOSING
 ```
 
 ### by venue
 ```
-  polymarket             n= 374  staked  1364.69  pnl  -109.28  won  54%  per$1 -0.118 [-0.18,-0.06]  &lt;- clears zero, LOSING
-      older half         n= 187  staked   671.67  pnl   -28.60  won  53%  per$1 -0.086 [-0.17,+0.01]
-      newer half         n= 187  staked   693.02  pnl   -80.68  won  55%  per$1 -0.150 [-0.23,-0.07]  &lt;- clears zero, LOSING
+  polymarket             n= 375  staked  1370.17  pnl  -124.48  won  53%  per$1 -0.128 [-0.19,-0.07]  &lt;- clears zero, LOSING
+      older half         n= 187  staked   685.85  pnl   -25.94  won  55%  per$1 -0.090 [-0.18,+0.00]
+      newer half         n= 188  staked   684.32  pnl   -98.55  won  51%  per$1 -0.167 [-0.24,-0.09]  &lt;- clears zero, LOSING
   kalshi                 n=   4  staked     2.47  pnl    -2.95  won  25%  per$1 -1.416 [-3.31,+0.48]  (n&lt;10, too thin to read)
 ```
 
 ### by route
 ```
-  first venue            n= 375  staked  1365.33  pnl  -109.91  won  54%  per$1 -0.120 [-0.18,-0.06]  &lt;- clears zero, LOSING
-      older half         n= 187  staked   667.79  pnl   -30.61  won  53%  per$1 -0.093 [-0.19,-0.00]  &lt;- clears zero, LOSING
-      newer half         n= 188  staked   697.54  pnl   -79.29  won  55%  per$1 -0.148 [-0.22,-0.07]  &lt;- clears zero, LOSING
+  first venue            n= 376  staked  1370.81  pnl  -125.11  won  53%  per$1 -0.131 [-0.19,-0.07]  &lt;- clears zero, LOSING
+      older half         n= 188  staked   686.49  pnl   -26.57  won  55%  per$1 -0.094 [-0.18,-0.01]  &lt;- clears zero, LOSING
+      newer half         n= 188  staked   684.32  pnl   -98.55  won  51%  per$1 -0.167 [-0.24,-0.09]  &lt;- clears zero, LOSING
   mirror                 n=   3  staked     1.83  pnl    -2.32  won  33%  per$1 -1.560 [-3.80,+0.68]  (n&lt;10, too thin to read)
 ```
 
 ### by timing
 ```
-  in-play                n= 290  staked  1144.46  pnl   -72.72  won  58%  per$1 -0.106 [-0.17,-0.04]  &lt;- clears zero, LOSING
-      older half         n= 145  staked   567.20  pnl    -8.01  won  58%  per$1 -0.058 [-0.16,+0.04]
-      newer half         n= 145  staked   577.26  pnl   -64.71  won  58%  per$1 -0.155 [-0.24,-0.07]  &lt;- clears zero, LOSING
-  pre-match              n=  88  staked   222.70  pnl   -39.51  won  40%  per$1 -0.216 [-0.39,-0.04]  &lt;- clears zero, LOSING
-      older half         n=  44  staked   115.67  pnl   -29.83  won  39%  per$1 -0.223 [-0.42,-0.02]  &lt;- clears zero, LOSING
-      newer half         n=  44  staked   107.03  pnl    -9.68  won  41%  per$1 -0.208 [-0.48,+0.07]
+  in-play                n= 299  staked  1173.23  pnl   -82.58  won  57%  per$1 -0.111 [-0.17,-0.05]  &lt;- clears zero, LOSING
+      older half         n= 149  staked   586.57  pnl   +11.42  won  61%  per$1 -0.032 [-0.13,+0.07]
+      newer half         n= 150  staked   586.66  pnl   -94.00  won  53%  per$1 -0.189 [-0.27,-0.10]  &lt;- clears zero, LOSING
+  pre-match              n=  80  staked   199.41  pnl   -44.85  won  36%  per$1 -0.259 [-0.44,-0.08]  &lt;- clears zero, LOSING
+      older half         n=  40  staked   100.64  pnl   -36.58  won  32%  per$1 -0.275 [-0.50,-0.06]  &lt;- clears zero, LOSING
+      newer half         n=  40  staked    98.77  pnl    -8.27  won  40%  per$1 -0.243 [-0.54,+0.03]
 ```
 
 ### by lead at entry
 ```
-  no read                n= 276  staked   954.41  pnl   -32.41  won  54%  per$1 -0.097 [-0.18,-0.02]  &lt;- clears zero, LOSING
-      older half         n= 138  staked   475.94  pnl    -9.03  won  54%  per$1 -0.034 [-0.14,+0.07]
-      newer half         n= 138  staked   478.47  pnl   -23.38  won  53%  per$1 -0.160 [-0.27,-0.04]  &lt;- clears zero, LOSING
-  3-5                    n=  55  staked   225.30  pnl   -36.65  won  58%  per$1 -0.166 [-0.30,-0.04]  &lt;- clears zero, LOSING
-      older half         n=  27  staked   116.78  pnl   -22.47  won  59%  per$1 -0.254 [-0.42,-0.08]  &lt;- clears zero, LOSING
-      newer half         n=  28  staked   108.52  pnl   -14.17  won  57%  per$1 -0.081 [-0.30,+0.13]
-  &lt;3                     n=  24  staked    79.04  pnl   -37.48  won  17%  per$1 -0.523 [-0.68,-0.35]  &lt;- clears zero, LOSING
-      older half         n=  12  staked    39.03  pnl   -19.64  won  17%  per$1 -0.528 [-0.78,-0.27]  &lt;- clears zero, LOSING
-      newer half         n=  12  staked    40.01  pnl   -17.84  won  17%  per$1 -0.518 [-0.73,-0.29]  &lt;- clears zero, LOSING
-  6+                     n=  23  staked   108.41  pnl    -5.69  won  83%  per$1 -0.058 [-0.20,+0.07]
-      older half         n=  11  staked    53.25  pnl   -12.52  won  64%  per$1 -0.259 [-0.52,-0.01]  &lt;- clears zero, LOSING
-      newer half         n=  12  staked    55.16  pnl    +6.83  won 100%  per$1 +0.126 [+0.08,+0.17]  &lt;- clears zero, WINNING
+  no read                n= 251  staked   861.99  pnl   -39.22  won  53%  per$1 -0.115 [-0.20,-0.03]  &lt;- clears zero, LOSING
+      older half         n= 125  staked   432.93  pnl    -8.78  won  54%  per$1 -0.050 [-0.16,+0.07]
+      newer half         n= 126  staked   429.06  pnl   -30.44  won  51%  per$1 -0.179 [-0.31,-0.06]  &lt;- clears zero, LOSING
+  3-5                    n=  71  staked   287.34  pnl   -44.46  won  56%  per$1 -0.151 [-0.28,-0.03]  &lt;- clears zero, LOSING
+      older half         n=  35  staked   149.89  pnl   -25.26  won  60%  per$1 -0.215 [-0.38,-0.07]  &lt;- clears zero, LOSING
+      newer half         n=  36  staked   137.45  pnl   -19.20  won  53%  per$1 -0.089 [-0.28,+0.10]
+  &lt;3                     n=  32  staked   107.24  pnl   -39.18  won  22%  per$1 -0.415 [-0.59,-0.22]  &lt;- clears zero, LOSING
+      older half         n=  16  staked    51.93  pnl   -29.20  won  12%  per$1 -0.590 [-0.78,-0.37]  &lt;- clears zero, LOSING
+      newer half         n=  16  staked    55.31  pnl    -9.98  won  31%  per$1 -0.240 [-0.51,+0.10]
+  6+                     n=  25  staked   116.07  pnl    -4.57  won  84%  per$1 -0.042 [-0.18,+0.08]
+      older half         n=  12  staked    57.91  pnl   -12.23  won  67%  per$1 -0.232 [-0.47,-0.01]  &lt;- clears zero, LOSING
+      newer half         n=  13  staked    58.16  pnl    +7.66  won 100%  per$1 +0.134 [+0.09,+0.18]  &lt;- clears zero, WINNING
 ```
 
 ### by rounds to go at entry
 ```
-  no read                n= 276  staked   954.41  pnl   -32.41  won  54%  per$1 -0.097 [-0.18,-0.02]  &lt;- clears zero, LOSING
-      older half         n= 138  staked   475.94  pnl    -9.03  won  54%  per$1 -0.034 [-0.14,+0.07]
-      newer half         n= 138  staked   478.47  pnl   -23.38  won  53%  per$1 -0.160 [-0.27,-0.04]  &lt;- clears zero, LOSING
-  &lt;=3                    n=  56  staked   246.71  pnl   -44.78  won  66%  per$1 -0.229 [-0.34,-0.12]  &lt;- clears zero, LOSING
-      older half         n=  28  staked   128.65  pnl   -12.38  won  75%  per$1 -0.138 [-0.30,+0.00]
-      newer half         n=  28  staked   118.06  pnl   -32.40  won  57%  per$1 -0.321 [-0.50,-0.15]  &lt;- clears zero, LOSING
-  7+                     n=  28  staked   100.63  pnl   -19.74  won  32%  per$1 -0.192 [-0.38,-0.02]  &lt;- clears zero, LOSING
-      older half         n=  14  staked    50.05  pnl    -8.97  won  36%  per$1 -0.158 [-0.43,+0.09]
-      newer half         n=  14  staked    50.58  pnl   -10.77  won  29%  per$1 -0.225 [-0.47,+0.02]
-  4-6                    n=  18  staked    65.41  pnl   -15.30  won  50%  per$1 -0.266 [-0.54,+0.01]
-      older half         n=   9  staked    34.77  pnl   -11.27  won  44%  per$1 -0.372 [-0.70,-0.04]  (n&lt;10, too thin to read)
-      newer half         n=   9  staked    30.64  pnl    -4.03  won  56%  per$1 -0.160 [-0.60,+0.28]  (n&lt;10, too thin to read)
+  no read                n= 251  staked   861.99  pnl   -39.22  won  53%  per$1 -0.115 [-0.20,-0.03]  &lt;- clears zero, LOSING
+      older half         n= 125  staked   432.93  pnl    -8.78  won  54%  per$1 -0.050 [-0.16,+0.07]
+      newer half         n= 126  staked   429.06  pnl   -30.44  won  51%  per$1 -0.179 [-0.31,-0.06]  &lt;- clears zero, LOSING
+  &lt;=3                    n=  59  staked   258.01  pnl   -51.11  won  64%  per$1 -0.243 [-0.36,-0.13]  &lt;- clears zero, LOSING
+      older half         n=  29  staked   133.40  pnl   -12.04  won  76%  per$1 -0.131 [-0.28,+0.00]
+      newer half         n=  30  staked   124.61  pnl   -39.07  won  53%  per$1 -0.352 [-0.53,-0.18]  &lt;- clears zero, LOSING
+  7+                     n=  38  staked   142.83  pnl   -22.76  won  37%  per$1 -0.159 [-0.30,-0.02]  &lt;- clears zero, LOSING
+      older half         n=  19  staked    67.28  pnl   -19.12  won  26%  per$1 -0.275 [-0.49,-0.06]  &lt;- clears zero, LOSING
+      newer half         n=  19  staked    75.55  pnl    -3.64  won  47%  per$1 -0.044 [-0.20,+0.14]
+  4-6                    n=  31  staked   109.81  pnl   -14.34  won  52%  per$1 -0.151 [-0.38,+0.08]
+      older half         n=  15  staked    54.52  pnl    -9.65  won  53%  per$1 -0.200 [-0.49,+0.10]
+      newer half         n=  16  staked    55.29  pnl    -4.69  won  50%  per$1 -0.105 [-0.43,+0.25]
 ```
 
 ### by second lot on a fixture
 ```
-  first lot              n= 343  staked  1232.84  pnl   -67.28  won  55%  per$1 -0.098 [-0.16,-0.04]  &lt;- clears zero, LOSING
-      older half         n= 171  staked   604.86  pnl    -0.62  won  55%  per$1 -0.044 [-0.14,+0.05]
-      newer half         n= 172  staked   627.98  pnl   -66.66  won  55%  per$1 -0.152 [-0.24,-0.07]  &lt;- clears zero, LOSING
-  second lot             n=  35  staked   134.32  pnl   -44.95  won  43%  per$1 -0.460 [-0.74,-0.22]  &lt;- clears zero, LOSING
-      older half         n=  17  staked    64.67  pnl   -21.84  won  41%  per$1 -0.387 [-0.63,-0.12]  &lt;- clears zero, LOSING
-      newer half         n=  18  staked    69.65  pnl   -23.10  won  44%  per$1 -0.529 [-1.04,-0.11]  &lt;- clears zero, LOSING
+  first lot              n= 345  staked  1243.47  pnl   -79.57  won  54%  per$1 -0.107 [-0.18,-0.04]  &lt;- clears zero, LOSING
+      older half         n= 172  staked   622.66  pnl    -4.68  won  56%  per$1 -0.061 [-0.17,+0.04]
+      newer half         n= 173  staked   620.80  pnl   -74.89  won  52%  per$1 -0.153 [-0.24,-0.07]  &lt;- clears zero, LOSING
+  second lot             n=  34  staked   129.17  pnl   -47.86  won  41%  per$1 -0.497 [-0.79,-0.23]  &lt;- clears zero, LOSING
+      older half         n=  17  staked    63.83  pnl   -24.48  won  41%  per$1 -0.397 [-0.67,-0.11]  &lt;- clears zero, LOSING
+      newer half         n=  17  staked    65.34  pnl   -23.39  won  41%  per$1 -0.597 [-1.11,-0.18]  &lt;- clears zero, LOSING
 ```
 
 ### by state_cut vs held
 ```
-  held                   n= 164  staked   551.00  pnl  -368.41  won  20%  per$1 -0.740 [-0.82,-0.66]  &lt;- clears zero, LOSING
-      older half         n=  82  staked   266.88  pnl  -217.03  won  10%  per$1 -0.818 [-0.89,-0.73]  &lt;- clears zero, LOSING
-      newer half         n=  82  staked   284.13  pnl  -151.39  won  30%  per$1 -0.663 [-0.80,-0.54]  &lt;- clears zero, LOSING
-  other cut              n=  23  staked    78.24  pnl    -9.33  won  30%  per$1 -0.100 [-0.22,+0.03]
-      older half         n=  11  staked    36.38  pnl    -5.46  won  18%  per$1 -0.109 [-0.30,+0.12]
-      newer half         n=  12  staked    41.87  pnl    -3.88  won  42%  per$1 -0.092 [-0.24,+0.04]
-  state cut              n=   8  staked    25.41  pnl   -15.06  won   0%  per$1 -0.592 [-0.70,-0.51]  (n&lt;10, too thin to read)
-      older half         n=   4  staked    13.25  pnl    -6.86  won   0%  per$1 -0.511 [-0.59,-0.45]  (n&lt;10, too thin to read)
-      newer half         n=   4  staked    12.15  pnl    -8.21  won   0%  per$1 -0.672 [-0.80,-0.55]  (n&lt;10, too thin to read)
+  held                   n= 167  staked   560.34  pnl  -372.85  won  20%  per$1 -0.733 [-0.81,-0.66]  &lt;- clears zero, LOSING
+      older half         n=  83  staked   272.78  pnl  -216.92  won  12%  per$1 -0.811 [-0.89,-0.72]  &lt;- clears zero, LOSING
+      newer half         n=  84  staked   287.56  pnl  -155.93  won  29%  per$1 -0.657 [-0.79,-0.53]  &lt;- clears zero, LOSING
+  other cut              n=  33  staked   121.00  pnl    -3.37  won  39%  per$1 -0.008 [-0.14,+0.13]
+      older half         n=  16  staked    51.73  pnl    -7.28  won  25%  per$1 -0.107 [-0.26,+0.06]
+      newer half         n=  17  staked    69.28  pnl    +3.91  won  53%  per$1 +0.085 [-0.11,+0.32]
+  state cut              n=  10  staked    32.62  pnl   -17.25  won   0%  per$1 -0.534 [-0.64,-0.44]  &lt;- clears zero, LOSING
+      older half         n=   5  staked    15.78  pnl    -8.21  won   0%  per$1 -0.516 [-0.57,-0.46]  (n&lt;10, too thin to read)
+      newer half         n=   5  staked    16.85  pnl    -9.03  won   0%  per$1 -0.551 [-0.75,-0.36]  (n&lt;10, too thin to read)
 ```
 
-## (c) Gates that fired on 2026-09-26 (685 runs, sole refusals summed over runs)
+## (c) Gates that fired on 2026-09-27 (747 runs, sole refusals summed over runs)
 ```
-  the model itself makes                29402   our record on 14 markets it pulled an offer on: n=   2  staked     4.52  pnl    +2.09  won  50%  per$1 +0.378 [-0.11,+0.87]  (n&lt;10, too thin to read)
-  the half-spread is over               29131   our record on 25 markets it pulled an offer on: n=   7  staked    19.55  pnl   -10.97  won  14%  per$1 -0.595 [-0.92,-0.19]  (n&lt;10, too thin to read)
-  edge is under the                     26858   our record on 42 markets it pulled an offer on: n=  14  staked    41.33  pnl    -1.23  won  50%  per$1 -0.034 [-0.40,+0.31]
-  edge is OVER the                      22818   no settled bet of ours on a market it refused — not measurable from our record
-  too early                              9008   no settled bet of ours on a market it refused — not measurable from our record
-  the spread and fee                     8125   no settled bet of ours on a market it refused — not measurable from our record
-  per-map bet with no                    4676   no settled bet of ours on a market it refused — not measurable from our record
-  already started                        3913   no settled bet of ours on a market it refused — not measurable from our record
-  cold team                              3791   our record on 3 markets it pulled an offer on: n=   1  staked     3.15  pnl    +1.74  won 100%  per$1 +0.553 [+0.55,+0.55]  (n&lt;10, too thin to read)
-  only shares resting at                 1238   no settled bet of ours on a market it refused — not measurable from our record
-  due elsewhere                           483   no settled bet of ours on a market it refused — not measurable from our record
-  the maps correction was                 281   no settled bet of ours on a market it refused — not measurable from our record
-  map handicap is switched                159   no settled bet of ours on a market it refused — not measurable from our record
-  has already marked this                 126   no settled bet of ours on a market it refused — not measurable from our record
-  maps total is switched                  120   no settled bet of ours on a market it refused — not measurable from our record
-  match over                               38   no settled bet of ours on a market it refused — not measurable from our record
-  no order book to                         12   no settled bet of ours on a market it refused — not measurable from our record
+  the model itself makes                34320   our record on 14 markets it pulled an offer on: n=   2  staked     4.52  pnl    +2.09  won  50%  per$1 +0.378 [-0.11,+0.87]  (n&lt;10, too thin to read)
+  the half-spread is over               18115   our record on 16 markets it pulled an offer on: n=   7  staked    19.55  pnl   -10.97  won  14%  per$1 -0.595 [-0.96,-0.17]  (n&lt;10, too thin to read)
+  edge is OVER the                      17878   no settled bet of ours on a market it refused — not measurable from our record
+  edge is under the                     17336   our record on 42 markets it pulled an offer on: n=  14  staked    41.33  pnl    -1.23  won  50%  per$1 -0.034 [-0.38,+0.33]
+  too early                             15586   no settled bet of ours on a market it refused — not measurable from our record
+  the spread and fee                     4743   no settled bet of ours on a market it refused — not measurable from our record
+  cold team                              3794   our record on 3 markets it pulled an offer on: n=   1  staked     3.15  pnl    +1.74  won 100%  per$1 +0.553 [+0.55,+0.55]  (n&lt;10, too thin to read)
+  already started                        3617   no settled bet of ours on a market it refused — not measurable from our record
+  per-map bet with no                    2706   no settled bet of ours on a market it refused — not measurable from our record
+  only shares resting at                  530   no settled bet of ours on a market it refused — not measurable from our record
+  thin sample                             178   no settled bet of ours on a market it refused — not measurable from our record
+  match over                               44   no settled bet of ours on a market it refused — not measurable from our record
+  no order book to                          9   no settled bet of ours on a market it refused — not measurable from our record
+  maps-total the format arithmetic          5   no settled bet of ours on a market it refused — not measurable from our record
+  due elsewhere                             3   no settled bet of ours on a market it refused — not measurable from our record
 
   skips of already-bettable candidates (reasons):
-    pre-match bets are off — we only bet matches that are already being played 32027
-    already ordered today                    1704
-    already holding the totals on this match — a maps-total and a maps-handicap are the same bet… 1360
-    would put $… at risk, over the $… cap    1048
-    already holding the handicap on this match — a maps-total and a maps-handicap are the same bet… 680
-    already holding this market              562
-    offer pulled … min ago — cooling off for another … min 169
-    we are already on Leo Team in this fixture — buying Misa Esports pays the spread twice to end… 121
-    no priceable ticket                      63
-    the venue refused this order — the venue refused the order — $… buys 0 contracts at 0.99+0.01… 58
-    the venue refused this order — the venue refused the order — only 0.0 contracts on the ask,… 29
-    we are already on Under in this fixture — buying Over pays the spread twice to end up on the… 6
-    the model makes Over 36% — under the 55% floor 4
-    the model makes Over 27% — under the 55% floor 4
-    the model makes Over 50% — under the 55% floor 3
-    the model makes Over 43% — under the 55% floor 3
-    the model makes Over 13% — under the 55% floor 3
-    already holding the totals on this match — this map&#x27;s winner and this total/handicap are the… 3
-    the model makes Over 40% — under the 55% floor 3
-    the model makes Over 12% — under the 55% floor 2
-    the model makes Over 14% — under the 55% floor 2
-    the model makes Over 11% — under the 55% floor 2
-    the model makes Over 22% — under the 55% floor 2
-    the model makes Over 51% — under the 55% floor 2
-    the model makes Over 42% — under the 55% floor 2
-    the model makes Over 31% — under the 55% floor 2
-    the model makes Over 29% — under the 55% floor 2
-    the model makes Over 17% — under the 55% floor 2
-    in-play at 85% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 2
-    the model makes Over 37% — under the 55% floor 2
-    in-play at 88% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 2
-    in-play at 92% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 2
-    in-play at 100% is over the 80% ceiling — risking $… to win $…, and that band loses money on… 2
-    the model makes Over 16% — under the 55% floor 2
+    pre-match bets are off — we only bet matches that are already being played 31913
+    no priceable ticket                      76
+    already holding this market              45
+    already ordered today                    14
+    already holding the totals on this match — a maps-total and a maps-handicap are the same bet… 7
+    already holding the handicap on this match — a maps-total and a maps-handicap are the same bet… 7
+    the model makes Over 20% — under the 55% floor 4
+    in-play at 88% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 3
+    the model makes Over 24% — under the 55% floor 2
+    in-play at 83% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 2
+    the model makes Over 33% — under the 55% floor 2
+    the model makes Over 28% — under the 55% floor 2
+    the model makes Over 15% — under the 55% floor 1
+    the model makes Over 27% — under the 55% floor 1
+    $… already on this match — another $… passes the $… cap, and the maps of one match are one… 1
     the model makes Over 18% — under the 55% floor 1
-    the model makes Over 9% — under the 55% floor 1
-    the model makes Over 24% — under the 55% floor 1
-    the model makes Under 48% — under the 55% floor 1
-    the model makes Yawara Esports 18% — under the 40% floor 1
-    the model makes Under 52% — under the 55% floor 1
-    the model makes Over 47% — under the 55% floor 1
-    a map market bought before its map is being played has no exit — buy it from the live score or… 1
-    the model makes Over 32% — under the 55% floor 1
-    the model makes Under 42% — under the 55% floor 1
-    in-play at 84% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
-    in-play at 86% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
-    the model makes Under 50% — under the 55% floor 1
-    the model makes Under 49% — under the 55% floor 1
-    the model makes Under 41% — under the 55% floor 1
-    the model makes Under 35% — under the 55% floor 1
-    the model makes Voca 22% — under the 40% floor 1
-    in-play at 90% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
+    the model makes Shopify Rebellion 18% — under the 40% floor 1
+    the model makes Over 14% — under the 55% floor 1
+    the model makes Shopify Rebellion 14% — under the 40% floor 1
+    the model makes Over 12% — under the 55% floor 1
+    the model makes Over 31% — under the 55% floor 1
+    in-play at 81% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
+    the model makes Over 17% — under the 55% floor 1
+    the model makes Iberian Soul 17% — under the 40% floor 1
+    the model makes Iberian Soul 20% — under the 40% floor 1
+    the model makes Over 11% — under the 55% floor 1
+    the model makes Natus Vincere 21% — under the 40% floor 1
+    in-play at 85% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
     in-play at 87% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
-    the model makes Over 46% — under the 55% floor 1
-    the model makes Color 10% — under the 40% floor 1
-    in-play at 96% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
-    the model makes Under 37% — under the 55% floor 1
-    the model makes Under 32% — under the 55% floor 1
-    the model makes Over 53% — under the 55% floor 1
-    the model makes Over 39% — under the 55% floor 1
-    in-play at 82% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
-    the model makes Team Nemesis 26% — under the 40% floor 1
-    the model makes Under 46% — under the 55% floor 1
-    the model makes Over 25% — under the 55% floor 1
-    the model makes Over 21% — under the 55% floor 1
-    the model makes Over 34% — under the 55% floor 1
+    the model makes Natus Vincere 16% — under the 40% floor 1
     the model makes Over 26% — under the 55% floor 1
-    the model makes Under 38% — under the 55% floor 1
-    the model makes Over 7% — under the 55% floor 1
+    in-play at 92% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
+    in-play at 89% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
+    the model makes Over 30% — under the 55% floor 1
+    the model makes Over 42% — under the 55% floor 1
+    in-play at 86% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
+    the model makes Under 35% — under the 55% floor 1
+    in-play at 82% is over the 80% ceiling — risking $… to win $…, and that band loses money on the… 1
+    the model makes Over 32% — under the 55% floor 1
+    the model makes Under 30% — under the 55% floor 1
     the model makes Under 26% — under the 55% floor 1
-    the model makes Over 44% — under the 55% floor 1
-    the model makes Over 28% — under the 55% floor 1
-    the model makes Xtreme Gaming 12% — under the 40% floor 1
-    the model makes Under 43% — under the 55% floor 1
-    the model makes Under 28% — under the 55% floor 1
-    the model makes Over 49% — under the 55% floor 1
-    the model makes Under 54% — under the 55% floor 1
+    the model makes Over 43% — under the 55% floor 1
+    the model makes Over 50% — under the 55% floor 1
+    the model makes Under 31% — under the 55% floor 1
+    already holding the totals on this match — this map&#x27;s winner and this total/handicap are the… 1
+    the model makes Under 46% — under the 55% floor 1
+    the model makes Over 35% — under the 55% floor 1
 ```
 
 ## (d) Watch list
-- WATCH  entry price = 50-60c: its newer half turned negative, -0.271/$1 over 57 bets, range [-0.49, -0.07] clear of zero (whole bucket -0.172/$1 over 114).
-- WATCH  entry price = 40-50c: its newer half turned negative, -0.331/$1 over 20 bets, range [-0.65, -0.01] clear of zero (whole bucket -0.175/$1 over 40).
-- WATCH  class = totals: its newer half turned negative, -0.333/$1 over 68 bets, range [-0.51, -0.17] clear of zero (whole bucket -0.197/$1 over 135).
-- WATCH  class = handicap: its newer half turned negative, -0.301/$1 over 40 bets, range [-0.51, -0.10] clear of zero (whole bucket -0.230/$1 over 80).
-- WATCH  game = cs2: its newer half turned negative, -0.250/$1 over 134 bets, range [-0.36, -0.14] clear of zero (whole bucket -0.142/$1 over 267).
-- WATCH  stars = 2★: its newer half turned negative, -0.309/$1 over 126 bets, range [-0.42, -0.20] clear of zero (whole bucket -0.206/$1 over 251).
-- WATCH  copier = model: its newer half turned negative, -0.184/$1 over 189 bets, range [-0.28, -0.09] clear of zero (whole bucket -0.132/$1 over 378).
-- WATCH  venue = polymarket: its newer half turned negative, -0.150/$1 over 187 bets, range [-0.23, -0.07] clear of zero (whole bucket -0.118/$1 over 374).
-- WATCH  route = first venue: its newer half turned negative, -0.148/$1 over 188 bets, range [-0.22, -0.07] clear of zero (whole bucket -0.120/$1 over 375).
-- WATCH  timing = in-play: its newer half turned negative, -0.155/$1 over 145 bets, range [-0.24, -0.07] clear of zero (whole bucket -0.106/$1 over 290).
-- WATCH  lead at entry = no read: its newer half turned negative, -0.160/$1 over 138 bets, range [-0.27, -0.04] clear of zero (whole bucket -0.097/$1 over 276).
-- WATCH  lead at entry = &lt;3: its newer half turned negative, -0.518/$1 over 12 bets, range [-0.73, -0.29] clear of zero (whole bucket -0.523/$1 over 24).
-- WATCH  rounds to go at entry = no read: its newer half turned negative, -0.160/$1 over 138 bets, range [-0.27, -0.04] clear of zero (whole bucket -0.097/$1 over 276).
-- WATCH  rounds to go at entry = &lt;=3: its newer half turned negative, -0.321/$1 over 28 bets, range [-0.50, -0.15] clear of zero (whole bucket -0.229/$1 over 56).
-- WATCH  second lot on a fixture = first lot: its newer half turned negative, -0.152/$1 over 172 bets, range [-0.24, -0.07] clear of zero (whole bucket -0.098/$1 over 343).
-- WATCH  second lot on a fixture = second lot: its newer half turned negative, -0.529/$1 over 18 bets, range [-1.04, -0.11] clear of zero (whole bucket -0.460/$1 over 35).
-- WATCH  state_cut vs held = held: its newer half turned negative, -0.663/$1 over 82 bets, range [-0.80, -0.54] clear of zero (whole bucket -0.740/$1 over 164).
+- WATCH  entry price = 50-60c: its newer half turned negative, -0.350/$1 over 56 bets, range [-0.57, -0.15] clear of zero (whole bucket -0.199/$1 over 112).
+- WATCH  entry price = 40-50c: its newer half turned negative, -0.317/$1 over 21 bets, range [-0.61, -0.00] clear of zero (whole bucket -0.204/$1 over 42).
+- WATCH  class = totals: its newer half turned negative, -0.256/$1 over 73 bets, range [-0.42, -0.09] clear of zero (whole bucket -0.200/$1 over 146).
+- WATCH  class = handicap: its newer half turned negative, -0.349/$1 over 41 bets, range [-0.55, -0.15] clear of zero (whole bucket -0.243/$1 over 82).
+- WATCH  game = cs2: its newer half turned negative, -0.214/$1 over 138 bets, range [-0.33, -0.11] clear of zero (whole bucket -0.145/$1 over 276).
+- WATCH  stars = 2★: its newer half turned negative, -0.313/$1 over 124 bets, range [-0.43, -0.21] clear of zero (whole bucket -0.220/$1 over 247).
+- WATCH  copier = model: its newer half turned negative, -0.200/$1 over 190 bets, range [-0.29, -0.12] clear of zero (whole bucket -0.142/$1 over 379).
+- WATCH  venue = polymarket: its newer half turned negative, -0.167/$1 over 188 bets, range [-0.24, -0.09] clear of zero (whole bucket -0.128/$1 over 375).
+- WATCH  route = first venue: its newer half turned negative, -0.167/$1 over 188 bets, range [-0.24, -0.09] clear of zero (whole bucket -0.131/$1 over 376).
+- WATCH  timing = in-play: its newer half turned negative, -0.189/$1 over 150 bets, range [-0.27, -0.10] clear of zero (whole bucket -0.111/$1 over 299).
+- WATCH  lead at entry = no read: its newer half turned negative, -0.179/$1 over 126 bets, range [-0.31, -0.06] clear of zero (whole bucket -0.115/$1 over 251).
+- WATCH  rounds to go at entry = no read: its newer half turned negative, -0.179/$1 over 126 bets, range [-0.31, -0.06] clear of zero (whole bucket -0.115/$1 over 251).
+- WATCH  rounds to go at entry = &lt;=3: its newer half turned negative, -0.352/$1 over 30 bets, range [-0.53, -0.18] clear of zero (whole bucket -0.243/$1 over 59).
+- WATCH  second lot on a fixture = first lot: its newer half turned negative, -0.153/$1 over 173 bets, range [-0.24, -0.07] clear of zero (whole bucket -0.107/$1 over 345).
+- WATCH  second lot on a fixture = second lot: its newer half turned negative, -0.597/$1 over 17 bets, range [-1.11, -0.18] clear of zero (whole bucket -0.497/$1 over 34).
+- WATCH  state_cut vs held = held: its newer half turned negative, -0.657/$1 over 84 bets, range [-0.79, -0.53] clear of zero (whole bucket -0.733/$1 over 167).
 
 ## (e) Was our own NUMBER right
 
 **We still cannot ask this from our own bet record, and here is the size of the hole.** a winner is sold or redeemed and a loser is never sold, so only the losing endings carry the venue&#x27;s own result -- 74 of the 76 that resolved in the 14 days to 2026-09-03. The fix is one field: the `ended` event carrying the market&#x27;s resolution on a SALE too.
 
 ```
-  totals      135 positions     61 carry the venue&#x27;s result     72 sold (no result recorded)      2 refunded or unknown      0 no number of ours
-  map          88 positions     41 carry the venue&#x27;s result     47 sold (no result recorded)      0 refunded or unknown      0 no number of ours
-  handicap     80 positions     36 carry the venue&#x27;s result     43 sold (no result recorded)      1 refunded or unknown      0 no number of ours
-  series       75 positions     22 carry the venue&#x27;s result     52 sold (no result recorded)      1 refunded or unknown      0 no number of ours
+  totals      146 positions     64 carry the venue&#x27;s result     79 sold (no result recorded)      3 refunded or unknown      0 no number of ours
+  map          92 positions     43 carry the venue&#x27;s result     49 sold (no result recorded)      0 refunded or unknown      0 no number of ours
+  handicap     82 positions     39 carry the venue&#x27;s result     42 sold (no result recorded)      1 refunded or unknown      0 no number of ours
+  series       59 positions     16 carry the venue&#x27;s result     42 sold (no result recorded)      1 refunded or unknown      0 no number of ours
 ```
 
-Banked 43 settled positions into `out/settled.jsonl` — the copy that outlives the 14-day event sweep. Every measurement in `research/` is capped at that window until this file is long enough to replace it.
+Banked 48 settled positions into `out/settled.jsonl` — the copy that outlives the 14-day event sweep. Every measurement in `research/` is capped at that window until this file is long enough to replace it.
 </pre>
